@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+
+<body>
+    <h1>50:Setting field values</h1>
+    <h3>LIST OF ZIP CODES AND AREAS IN ISLAMABAD</h3>
+    <p>45200 -> Golra</p>
+    <p>44210 -> Islamabad F-7 Markaz</p>
+    <p>44320 -> Islamabad Federal Board</p>
+    <p>44310 -> Islamabad Allama Iqbal Open University</p>
+    <p>*-> Invalid zipcode</p>
+
+    <form>
+        ZipCode: <input type="text" name="" id="zipcode" onblur="setAreaName()">
+        <br><br>
+        Area: <input type="text" id="text">
+    </form>
+
+    <script>
+        function setAreaName() {
+            var zipCode = +document.getElementById("zipcode").value;
+            var areaEl = document.getElementById("text");
+            if (zipCode === 45200) {
+                areaEl.value = "Golra";
+            } else if (zipCode === 44210) {
+                areaEl.value = "Islamabad F-7 Markaz";
+            } else if (zipCode === 44320) {
+                areaEl.value = "Islamabad Federal Board"
+            } else if (zipCode === 44310) {
+                areaEl.value = "Islamabad Allama Iqbal Open University"
+            } else {
+                alert("Invalid zipcode");
+            }
+        }
+    </script>
+
+</body>
+
+</html>
